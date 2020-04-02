@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
-  <link rel="stylesheet" type="text/css" href='/node_modules/design-pichincha/dist/collection/global/spaces.css' />
-  <link rel="stylesheet" type="text/css" href='/node_modules/design-pichincha/dist/collection/global/variables.css' />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/design-pichincha/dist/design-pichincha/design-pichincha.css"
+    />
+    <script type="module">
+      import {
+        applyPolyfills,
+        defineCustomElements
+      } from "https://unpkg.com/design-pichincha/loader/index.mjs";
+      applyPolyfills().then(() => {
+        defineCustomElements();
+      });
+    </script>
+    <script type="module" src="/build/wc-digimoney.esm.js"></script>
+    <script nomodule src="/build/wc-digimoney.js"></script>
+  </head>
 
-
-  <script type="module" src="/build/wc-digimoney.esm.js"></script>
-  <script nomodule src="/build/wc-digimoney.js"></script>
-
-</head>
-<body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
-</body>
+  <body>
+    <my-component
+      first="Stencil"
+      last="'Don't call me a framework' JS"
+    ></my-component>
+  </body>
 </html>
