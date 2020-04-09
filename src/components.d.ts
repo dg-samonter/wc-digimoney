@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface InputDigimoney {
+        "disabled": boolean;
+        "placeholder": string;
+        "status": number;
+        "value": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -20,19 +26,43 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TableDigimoney {
+        "datarecords": any[];
+    }
 }
 declare global {
+    interface HTMLInputDigimoneyElement extends Components.InputDigimoney, HTMLStencilElement {
+    }
+    var HTMLInputDigimoneyElement: {
+        prototype: HTMLInputDigimoneyElement;
+        new (): HTMLInputDigimoneyElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTableDigimoneyElement extends Components.TableDigimoney, HTMLStencilElement {
+    }
+    var HTMLTableDigimoneyElement: {
+        prototype: HTMLTableDigimoneyElement;
+        new (): HTMLTableDigimoneyElement;
+    };
     interface HTMLElementTagNameMap {
+        "input-digimoney": HTMLInputDigimoneyElement;
         "my-component": HTMLMyComponentElement;
+        "table-digimoney": HTMLTableDigimoneyElement;
     }
 }
 declare namespace LocalJSX {
+    interface InputDigimoney {
+        "disabled"?: boolean;
+        "onChangeInput"?: (event: CustomEvent<any>) => void;
+        "placeholder"?: string;
+        "status"?: number;
+        "value"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -47,15 +77,23 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TableDigimoney {
+        "datarecords"?: any[];
+        "onClickRow"?: (event: CustomEvent<any>) => void;
+    }
     interface IntrinsicElements {
+        "input-digimoney": InputDigimoney;
         "my-component": MyComponent;
+        "table-digimoney": TableDigimoney;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "input-digimoney": LocalJSX.InputDigimoney & JSXBase.HTMLAttributes<HTMLInputDigimoneyElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "table-digimoney": LocalJSX.TableDigimoney & JSXBase.HTMLAttributes<HTMLTableDigimoneyElement>;
         }
     }
 }

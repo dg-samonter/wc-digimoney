@@ -1,0 +1,45 @@
+:host {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f6f9;
+}
+
+th {
+  background-color: #e9ecf3;
+}
+
+.aprobed {
+  background: rgb(172, 202, 229);
+  border-radius: 4px;
+  height: 8px;
+  width: 8px;
+  margin: 0 auto;
+}
+
+.stend {
+  background: rgb(213, 7, 7);
+  border-radius: 4px;
+  height: 8px;
+  width: 13px;
+  margin: 0 auto;
+}
+
+.negate {
+  background: rgb(200, 200, 200);
+  border-radius: 4px;
+  height: 8px;
+  width: 8px;
+  margin: 0 auto;
+}

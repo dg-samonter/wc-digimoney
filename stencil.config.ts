@@ -4,6 +4,10 @@ export const config: Config = {
   namespace: "wc-digimoney",
   outputTargets: [
     {
+      type: 'dist',
+      esmLoaderPath: '../loader'
+    },
+    {
       type: "docs-readme"
     },
     {
