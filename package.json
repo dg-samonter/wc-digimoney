@@ -1,6 +1,6 @@
 {
   "name": "wc-digimoney",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "design-pichincha": "0.0.11"
+    "wc-ds-pichincha": "0.0.1"
   },
   "dependencies": {}
 }
